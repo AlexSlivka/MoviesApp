@@ -18,6 +18,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:baselineAlignBottom="true"/>
 
+    <View
+        android:layout_width="wrap_content"
+        android:background="@drawable/shape_gradient_orig"
+        android:layout_height="298dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/back_textView"
         android:layout_width="wrap_content"
@@ -143,7 +150,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/star1_imageView"
         android:layout_marginStart="@dimen/space_4x"
-        android:layout_marginTop="28dp"/>
+        android:layout_marginTop="@dimen/space_2x"/>
 
     <TextView
         android:id="@+id/storyline_text_textView"
@@ -168,7 +175,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/storyline_text_textView"
         android:layout_marginStart="@dimen/space_4x"
-        android:layout_marginTop="18dp"/>
+        android:layout_marginTop="@dimen/space_3x"/>
 
     <ImageView
         android:id="@+id/actor1_imageView"
