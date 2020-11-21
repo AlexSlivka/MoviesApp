@@ -6,6 +6,7 @@
     <dimen name="space_2x">8dp</dimen>
     <dimen name="space_1x">4dp</dimen>
     <dimen name="name_movie_text_size">40sp</dimen>
+    <dimen name="size_star_icon">19dp</dimen>
 
 
 </resources>
