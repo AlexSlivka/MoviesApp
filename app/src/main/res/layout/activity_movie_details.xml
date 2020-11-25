@@ -44,7 +44,7 @@
             android:elevation="@dimen/space_2x"
             android:text="@string/back_button"
             android:textColor="@color/dark_grey_of_reviews"
-            app:drawableLeftCompat="@drawable/path"
+            app:drawableLeftCompat="@drawable/ic_path"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -92,7 +92,7 @@
             app:layout_constraintEnd_toStartOf="@id/star2_imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/film_genre_textView"
-            app:srcCompat="@drawable/star_icon"
+            app:srcCompat="@drawable/ic_star_icon"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -103,7 +103,7 @@
             app:layout_constraintEnd_toStartOf="@id/star3_imageView"
             app:layout_constraintStart_toEndOf="@id/star1_imageView"
             app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/star_icon"
+            app:srcCompat="@drawable/ic_star_icon"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -114,7 +114,7 @@
             app:layout_constraintEnd_toStartOf="@id/star4_imageView"
             app:layout_constraintStart_toEndOf="@id/star2_imageView"
             app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/star_icon"
+            app:srcCompat="@drawable/ic_star_icon"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -125,7 +125,7 @@
             app:layout_constraintEnd_toStartOf="@id/star5_imageView"
             app:layout_constraintStart_toEndOf="@id/star3_imageView"
             app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/star_icon"
+            app:srcCompat="@drawable/ic_star_icon"
             tools:ignore="RtlSymmetry" />
 
         <ImageView
@@ -136,7 +136,7 @@
             app:layout_constraintEnd_toStartOf="@id/reviews_number_textView"
             app:layout_constraintStart_toEndOf="@id/star4_imageView"
             app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/star_icon_gray"
+            app:srcCompat="@drawable/ic_star_icon_gray"
             tools:ignore="RtlSymmetry" />
 
         <TextView
