@@ -7,6 +7,9 @@
     <dimen name="space_1x">4dp</dimen>
     <dimen name="name_movie_text_size">40sp</dimen>
     <dimen name="size_star_icon">19dp</dimen>
+    <dimen name="size_reviews_number_on_poster">8sp</dimen>
+    <dimen name="size_star_icon_on_poster">8dp</dimen>
+    <dimen name="margin_start_on_poster">6dp</dimen>
 
 
 </resources>
