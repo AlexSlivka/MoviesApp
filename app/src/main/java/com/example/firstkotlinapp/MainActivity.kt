@@ -16,13 +16,15 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.TransactionsFragmen
 
     override fun goToMovieDetailsFragment() {
         supportFragmentManager.beginTransaction()
-                .add(R.id.main_container, FragmentMoviesDetails())
+                .addToBackStack(null)
+                .replace(R.id.main_container, FragmentMoviesDetails())
                 .commit()
     }
 
     override fun backToMoviesListFragment() {
         supportFragmentManager.beginTransaction()
-                .add(R.id.main_container, FragmentMoviesList())
+                .addToBackStack(null)
+                .replace(R.id.main_container, FragmentMoviesList())
                 .commit()
     }
 }
