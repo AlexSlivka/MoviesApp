@@ -232,6 +232,14 @@
             app:layout_constraintStart_toStartOf="@id/poster_avengers_end_game_imageView"
             app:layout_constraintTop_toBottomOf="@id/name_of_movie_on_poster_textView" />
 
+        <TextView
+            android:id="@+id/filling_on_poster_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:layout_marginStart="@dimen/margin_start_on_poster"
+            android:text=" "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/film_card_outline_imageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
