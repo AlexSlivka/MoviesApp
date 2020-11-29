@@ -2,9 +2,8 @@ package com.example.firstkotlinapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), FragmentMoviesList.TransactionsFragmentClicks, FragmentMoviesDetails.MovieDetailsFragmentClicks {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -12,11 +11,19 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction()
                     .add(R.id.main_container, FragmentMoviesList())
                     .commit()
-        } else {
-            supportFragmentManager.beginTransaction()
-                    .add(R.id.main_container, FragmentMoviesDetails())
-                    .commit()
         }
+    }
+
+    override fun goToMovieDetailsFragment() {
+        supportFragmentManager.beginTransaction()
+                .add(R.id.main_container, FragmentMoviesDetails())
+                .commit()
+    }
+
+    override fun backToMoviesListFragment() {
+        supportFragmentManager.beginTransaction()
+                .add(R.id.main_container, FragmentMoviesList())
+                .commit()
     }
 }
 
