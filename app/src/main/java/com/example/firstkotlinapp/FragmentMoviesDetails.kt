@@ -14,7 +14,7 @@ class FragmentMoviesDetails : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view = inflater.inflate(R.layout.fragment_movies_details, container, false)
         view?.findViewById<TextView>(R.id.back_textView)?.apply {
             setOnClickListener {

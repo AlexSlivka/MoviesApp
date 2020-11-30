@@ -14,7 +14,7 @@ class FragmentMoviesList : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view = inflater.inflate(R.layout.fragment_movies_list, container, false)
         view?.findViewById<ImageView>(R.id.poster_avengers_end_game_imageView)?.apply {
             setOnClickListener {
