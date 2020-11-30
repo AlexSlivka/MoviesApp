@@ -5,12 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 class FragmentMoviesDetails : Fragment() {
-    private var MovieDetailsFragmentClick: MovieDetailsFragmentClicks? = null
+    private var movieDetailsFragmentClick: MovieDetailsFragmentClicks? = null
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -19,23 +18,22 @@ class FragmentMoviesDetails : Fragment() {
         val view = inflater.inflate(R.layout.fragment_movies_details, container, false)
         view?.findViewById<TextView>(R.id.back_textView)?.apply {
             setOnClickListener {
-                MovieDetailsFragmentClick?.backToMoviesListFragment()
+                movieDetailsFragmentClick?.backToMoviesListFragment()
             }
         }
         return view
-
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is MovieDetailsFragmentClicks) {
-            MovieDetailsFragmentClick = context
+            movieDetailsFragmentClick = context
         }
     }
 
     override fun onDetach() {
         super.onDetach()
-        MovieDetailsFragmentClick = null
+        movieDetailsFragmentClick = null
     }
 
     interface MovieDetailsFragmentClicks {

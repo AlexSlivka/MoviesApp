@@ -7,7 +7,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.TransactionsFragmen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                     .add(R.id.main_container, FragmentMoviesList())
                     .commit()
@@ -22,10 +22,7 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.TransactionsFragmen
     }
 
     override fun backToMoviesListFragment() {
-        supportFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.main_container, FragmentMoviesList())
-                .commit()
+        supportFragmentManager.popBackStack()
     }
 }
 
