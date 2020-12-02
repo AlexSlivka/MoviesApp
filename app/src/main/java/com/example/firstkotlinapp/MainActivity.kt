@@ -3,7 +3,7 @@ package com.example.firstkotlinapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity(), FragmentMoviesList.TransactionsFragmentClicks, FragmentMoviesDetails.MovieDetailsFragmentClicks {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -12,17 +12,6 @@ class MainActivity : AppCompatActivity(), FragmentMoviesList.TransactionsFragmen
                     .add(R.id.main_container, FragmentMoviesList())
                     .commit()
         }
-    }
-
-    override fun goToMovieDetailsFragment() {
-        supportFragmentManager.beginTransaction()
-                .addToBackStack(null)
-                .replace(R.id.main_container, FragmentMoviesDetails())
-                .commit()
-    }
-
-    override fun backToMoviesListFragment() {
-        supportFragmentManager.popBackStack()
     }
 }
 
