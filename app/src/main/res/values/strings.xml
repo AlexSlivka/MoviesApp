@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">FirstKotlinApp</string>
     <string name="to_movie_details">To Movie Details</string>
-    <string name="name_of_movie">Avengers:\n End Game</string>
+    <string name="name_of_movie">Avengers:\nEnd Game</string>
+    <string name="name_of_movie_on_poster">Avengers: End Game</string>
     <string name="back_button"> Back</string>
     <string name="age_limit">13+</string>
     <string name="film_genre">Action, Adventure, Fantasy</string>
@@ -13,5 +14,7 @@
     <string name="chris_evans">Chris Evans</string>
     <string name="mark_ruffalo">Mark Ruffalo</string>
     <string name="chris_hemsworth">Chris Hemsworth</string>
+    <string name="movies_list">Movies list</string>
+    <string name="movie_length">137 MIN</string>
 
 </resources>
