@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/space_4x"
             android:text="@string/film_genre"
-            android:textColor="@color/color_of_ganre"
+            android:textColor="@color/color_of_genre"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name_of_movie_textView"
             tools:ignore="RtlSymmetry" />

@@ -10,7 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="white_basic">#FFFFFF</color>
     <color name="white_name_of_movie">#ECECEC</color>
-    <color name="color_of_ganre">#FF3466</color>
+    <color name="color_of_genre">#FF3466</color>
     <color name="dark_grey_of_reviews">#6D6D80</color>
     <color name="dark_grey_of_movie_length">#565665</color>
     <color name="grey_name_of_actors">#D8D8D8</color>

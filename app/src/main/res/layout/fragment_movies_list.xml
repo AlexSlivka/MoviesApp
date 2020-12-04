@@ -90,7 +90,7 @@
             app:srcCompat="@drawable/rectangle" />
 
         <TextView
-            android:id="@+id/age_limit_on_poster_textView2"
+            android:id="@+id/age_limit_on_poster_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="@dimen/space_3x"
@@ -123,7 +123,7 @@
             android:layout_marginBottom="22dp"
             android:elevation="@dimen/space_3x"
             android:text="@string/film_genre"
-            android:textColor="@color/color_of_ganre"
+            android:textColor="@color/color_of_genre"
             android:textSize="@dimen/size_reviews_number_on_poster"
             app:layout_constraintBottom_toBottomOf="@id/poster_avengers_end_game_imageView"
             app:layout_constraintStart_toStartOf="@id/poster_avengers_end_game_imageView"
