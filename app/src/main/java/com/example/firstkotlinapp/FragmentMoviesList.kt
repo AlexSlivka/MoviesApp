@@ -43,7 +43,7 @@ class FragmentMoviesList : Fragment() {
     }
 
     private fun doOnClick(movie: Movie) {
-        val firstMovie = "Avengers:End Game"
+        val firstMovie = MoviesDataSource().getMovies()[0].nameMovie // val firstMovie = "Avengers:End Game"
         recyclerMoviesList?.let {
             if (movie.nameMovie.equals(firstMovie)) {
                 fragmentManager?.beginTransaction()
