@@ -9,21 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class MoviesListAdapter(private val clickListener: OnRecyclerItemClicked) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MoviesListAdapter(private val clickListener: OnRecyclerItemClicked) : RecyclerView.Adapter<MoviesListAdapter.MoviesListViewHolder>() {
     private var movies = listOf<Movie>()
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesListViewHolder {
         return MoviesListViewHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.view_holder_movie, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder) {
-            is MoviesListViewHolder -> {
-                holder.onBind(movies[position])
-                holder.itemView.setOnClickListener { clickListener.onClick(movies[position]) }
-            }
-        }
+    override fun onBindViewHolder(holder: MoviesListViewHolder, position: Int) {
+        holder.onBind(movies[position])
+        holder.itemView.setOnClickListener { clickListener.onClick(movies[position]) }
     }
 
     override fun getItemCount(): Int {
@@ -66,6 +62,8 @@ class MoviesListAdapter(private val clickListener: OnRecyclerItemClicked) : Recy
                     .fallback(R.drawable.ic_avatar_placeholder)
         }
     }
+
+
 }
 
 interface OnRecyclerItemClicked {
