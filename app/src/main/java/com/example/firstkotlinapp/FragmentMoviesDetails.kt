@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 class FragmentMoviesDetails : Fragment() {
 
     private var recyclerMoviesDetail: RecyclerView? = null
+    private var adapterDetailsAdapter: MoviesDetailsAdapter? = null
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -28,7 +29,8 @@ class FragmentMoviesDetails : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerMoviesDetail = view.findViewById(R.id.rv_actors_list)
-        recyclerMoviesDetail?.adapter = MoviesDetailsAdapter()
+        adapterDetailsAdapter = MoviesDetailsAdapter()
+        recyclerMoviesDetail?.adapter = adapterDetailsAdapter
         recyclerMoviesDetail?.layoutManager = LinearLayoutManager(context,RecyclerView.HORIZONTAL,false)
     }
 
@@ -43,7 +45,7 @@ class FragmentMoviesDetails : Fragment() {
     }
 
     private fun updateData() {
-        (recyclerMoviesDetail?.adapter as? MoviesDetailsAdapter)?.apply {
+       adapterDetailsAdapter?.apply {
             bindActors(ActorsDataSource().getActors())
         }
     }

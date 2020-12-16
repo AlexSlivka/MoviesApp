@@ -12,6 +12,7 @@ import com.google.android.material.snackbar.Snackbar
 class FragmentMoviesList : Fragment() {
 
     private var recyclerMoviesList: RecyclerView? = null
+    private var adapterMoviesList: MoviesListAdapter? = null
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -24,7 +25,8 @@ class FragmentMoviesList : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerMoviesList = view.findViewById(R.id.rv_movies_list)
-        recyclerMoviesList?.adapter = MoviesListAdapter(clickListener)
+        adapterMoviesList = MoviesListAdapter(clickListener)
+        recyclerMoviesList?.adapter = adapterMoviesList
         recyclerMoviesList?.layoutManager = GridLayoutManager(context, 2)
     }
 
@@ -39,9 +41,7 @@ class FragmentMoviesList : Fragment() {
     }
 
     private fun updateData() {
-        (recyclerMoviesList?.adapter as? MoviesListAdapter)?.apply {
-            bindMovies(MoviesDataSource().getMovies())
-        }
+        adapterMoviesList?.apply { bindMovies(MoviesDataSource().getMovies()) }
     }
 
     private fun doOnClick(movie: Movie) {
@@ -50,17 +50,6 @@ class FragmentMoviesList : Fragment() {
                 ?.replace(R.id.main_container, FragmentMoviesDetails())
                 ?.commit()
     }
-   /* private fun doOnClick(movie: Movie) {
-        val firstMovie = MoviesDataSource().getMovies()[0].nameMovie // val firstMovie = "Avengers:End Game"
-        recyclerMoviesList?.let {
-            if (movie.nameMovie.equals(firstMovie)) {
-                fragmentManager?.beginTransaction()
-                        ?.addToBackStack(null)
-                        ?.replace(R.id.main_container, FragmentMoviesDetails())
-                        ?.commit()
-            }
-        }
-    }*/
 
     private val clickListener = object : OnRecyclerItemClicked {
         override fun onClick(movie: Movie) {
