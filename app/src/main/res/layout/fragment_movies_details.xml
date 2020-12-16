@@ -185,17 +185,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/storyline_text_textView" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_actors_list"
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/space_2x"
-            android:layout_marginTop="@dimen/space_2x"
-            android:layout_marginEnd="@dimen/space_2x"
-            android:layout_marginBottom="@dimen/space_2x"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cast_textView" />
+            app:layout_constraintTop_toBottomOf="@id/cast_textView">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_actors_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/space_2x"
+                android:paddingTop="@dimen/space_2x"
+                android:paddingEnd="@dimen/space_2x"
+                android:paddingBottom="@dimen/space_2x"
+                android:clipToPadding="false"
+                app:layout_constraintDimensionRatio="1:1"
+                 />
+        </ScrollView>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
