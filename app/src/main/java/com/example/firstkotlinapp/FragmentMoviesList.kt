@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 
 class FragmentMoviesList : Fragment() {
+
     private var recyclerMoviesList: RecyclerView? = null
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -43,6 +45,12 @@ class FragmentMoviesList : Fragment() {
     }
 
     private fun doOnClick(movie: Movie) {
+        fragmentManager?.beginTransaction()
+                ?.addToBackStack(null)
+                ?.replace(R.id.main_container, FragmentMoviesDetails())
+                ?.commit()
+    }
+   /* private fun doOnClick(movie: Movie) {
         val firstMovie = MoviesDataSource().getMovies()[0].nameMovie // val firstMovie = "Avengers:End Game"
         recyclerMoviesList?.let {
             if (movie.nameMovie.equals(firstMovie)) {
@@ -52,7 +60,7 @@ class FragmentMoviesList : Fragment() {
                         ?.commit()
             }
         }
-    }
+    }*/
 
     private val clickListener = object : OnRecyclerItemClicked {
         override fun onClick(movie: Movie) {

@@ -10,7 +10,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class MoviesListAdapter(private val clickListener: OnRecyclerItemClicked) : RecyclerView.Adapter<MoviesListAdapter.MoviesListViewHolder>() {
+
     private var movies = listOf<Movie>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesListViewHolder {
         return MoviesListViewHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.view_holder_movie, parent, false)

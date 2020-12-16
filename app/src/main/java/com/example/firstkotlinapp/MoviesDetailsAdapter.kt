@@ -10,7 +10,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class MoviesDetailsAdapter : RecyclerView.Adapter<MoviesDetailsAdapter.MoviesDetailViewHolder>() {
+
     private var actors = listOf<Actor>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesDetailViewHolder {
         return MoviesDetailViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_holder_actor, parent, false))
     }

@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class FragmentMoviesDetails : Fragment() {
+
     private var recyclerMoviesDetail: RecyclerView? = null
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
