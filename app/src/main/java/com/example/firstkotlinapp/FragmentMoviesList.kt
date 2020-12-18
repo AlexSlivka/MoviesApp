@@ -41,7 +41,7 @@ class FragmentMoviesList : Fragment() {
     }
 
     private fun updateData() {
-        adapterMoviesList?.apply { bindMovies(MoviesDataSource().getMovies()) }
+        adapterMoviesList?.bindMovies(MoviesDataSource().getMovies())
     }
 
     private fun doOnClick(movie: Movie) {
