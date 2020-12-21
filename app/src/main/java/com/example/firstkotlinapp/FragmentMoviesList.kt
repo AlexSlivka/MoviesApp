@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
+
 
 class FragmentMoviesList : Fragment() {
 
@@ -27,7 +27,11 @@ class FragmentMoviesList : Fragment() {
         recyclerMoviesList = view.findViewById(R.id.rv_movies_list)
         adapterMoviesList = MoviesListAdapter(clickListener)
         recyclerMoviesList?.adapter = adapterMoviesList
-        recyclerMoviesList?.layoutManager = GridLayoutManager(context, 2)
+        val displayMetrics = context?.resources?.displayMetrics
+        val screenWidthDp = displayMetrics!!.widthPixels / displayMetrics.density
+        val columnWidthDp = resources.getDimensionPixelSize(R.dimen.width_holder_movie)/ displayMetrics.density
+        val noOfColumns = ((screenWidthDp / columnWidthDp + 0.5) ).toInt()// +0.5 for co
+        recyclerMoviesList?.layoutManager = GridLayoutManager(context, noOfColumns)
     }
 
     override fun onStart() {
