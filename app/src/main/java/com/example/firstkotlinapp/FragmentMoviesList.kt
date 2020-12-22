@@ -29,8 +29,8 @@ class FragmentMoviesList : Fragment() {
         recyclerMoviesList?.adapter = adapterMoviesList
         val displayMetrics = context?.resources?.displayMetrics
         val screenWidthDp = displayMetrics!!.widthPixels / displayMetrics.density
-        val columnWidthDp = resources.getDimensionPixelSize(R.dimen.width_holder_movie)/ displayMetrics.density
-        val noOfColumns = ((screenWidthDp / columnWidthDp + 0.5) ).toInt()// +0.5 for co
+        val columnWidthDp = resources.getDimensionPixelSize(R.dimen.width_holder_movie) / displayMetrics.density
+        val noOfColumns = (screenWidthDp / columnWidthDp).toInt()
         recyclerMoviesList?.layoutManager = GridLayoutManager(context, noOfColumns)
     }
 
