@@ -83,60 +83,17 @@
             app:layout_constraintTop_toBottomOf="@id/name_of_movie_textView"
             tools:ignore="RtlSymmetry" />
 
-        <ImageView
-            android:id="@+id/star1_imageView"
+        <RatingBar
+            android:id="@+id/ratingBar_star"
+            style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/size_star_icon"
-            android:paddingStart="@dimen/space_4x"
-            app:layout_constraintEnd_toStartOf="@id/star2_imageView"
+            android:layout_marginStart="@dimen/space_4x"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/dark_grey_of_reviews"
+            android:progressTint="@color/color_of_genre"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/film_genre_textView"
-            app:srcCompat="@drawable/ic_star_icon"
-            tools:ignore="RtlSymmetry" />
-
-        <ImageView
-            android:id="@+id/star2_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_star_icon"
-            android:paddingStart="@dimen/space_1x"
-            app:layout_constraintEnd_toStartOf="@id/star3_imageView"
-            app:layout_constraintStart_toEndOf="@id/star1_imageView"
-            app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/ic_star_icon"
-            tools:ignore="RtlSymmetry" />
-
-        <ImageView
-            android:id="@+id/star3_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_star_icon"
-            android:paddingStart="@dimen/space_1x"
-            app:layout_constraintEnd_toStartOf="@id/star4_imageView"
-            app:layout_constraintStart_toEndOf="@id/star2_imageView"
-            app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/ic_star_icon"
-            tools:ignore="RtlSymmetry" />
-
-        <ImageView
-            android:id="@+id/star4_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_star_icon"
-            android:paddingStart="@dimen/space_1x"
-            app:layout_constraintEnd_toStartOf="@id/star5_imageView"
-            app:layout_constraintStart_toEndOf="@id/star3_imageView"
-            app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/ic_star_icon"
-            tools:ignore="RtlSymmetry" />
-
-        <ImageView
-            android:id="@+id/star5_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_star_icon"
-            android:paddingStart="@dimen/space_1x"
-            app:layout_constraintEnd_toStartOf="@id/reviews_number_textView"
-            app:layout_constraintStart_toEndOf="@id/star4_imageView"
-            app:layout_constraintTop_toTopOf="@id/star1_imageView"
-            app:srcCompat="@drawable/ic_star_icon_gray"
-            tools:ignore="RtlSymmetry" />
+            app:layout_constraintTop_toBottomOf="@id/film_genre_textView" />
 
         <TextView
             android:id="@+id/reviews_number_textView"
@@ -145,7 +102,7 @@
             android:paddingStart="@dimen/space_2x"
             android:text="@string/reviews_number"
             android:textColor="@color/dark_grey_of_reviews"
-            app:layout_constraintStart_toEndOf="@id/star5_imageView"
+            app:layout_constraintStart_toEndOf="@id/ratingBar_star"
             app:layout_constraintTop_toBottomOf="@id/film_genre_textView"
             tools:ignore="RtlSymmetry" />
 
@@ -159,7 +116,7 @@
             android:textColor="@color/white_name_of_movie"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/star1_imageView" />
+            app:layout_constraintTop_toBottomOf="@id/ratingBar_star" />
 
         <TextView
             android:id="@+id/storyline_text_textView"
