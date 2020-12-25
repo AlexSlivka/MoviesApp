@@ -9,7 +9,8 @@ class MoviesDataSource {
                         "Action, Adventure, Fantasy",
                         "13+",
                         "125 Reviews",
-                        "137 MIN"
+                        "137 MIN",
+                        4F
                 ),
                 Movie(
                         "Tenet",
@@ -17,7 +18,8 @@ class MoviesDataSource {
                         "Action, Sci-Fi, Thriller",
                         "16+",
                         "98 Reviews",
-                        "97 MIN"
+                        "97 MIN",
+                        3F
                 ),
                 Movie(
                         "Black Widow",
@@ -25,7 +27,8 @@ class MoviesDataSource {
                         "Action, Adventure, Sci-Fi",
                         "13+",
                         "38 Reviews",
-                        "102 MIN"
+                        "102 MIN",
+                        5F
                 ),
                 Movie(
                         "Wonder Woman 1984",
@@ -33,7 +36,8 @@ class MoviesDataSource {
                         "Action, Adventure, Fantasy",
                         "13+",
                         "74 Reviews",
-                        "120 MIN"
+                        "120 MIN",
+                        4F
                 )
         )
     }

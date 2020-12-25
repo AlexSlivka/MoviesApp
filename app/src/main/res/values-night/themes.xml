@@ -13,10 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar.Small">
-        <item name="colorControlNormal">@color/dark_grey_of_reviews</item>
-        <item name="colorControlActivated">@color/color_of_genre</item>
-    </style>
+
     <style name="ActorNameText">
         <item name="android:textColor">@color/grey_name_of_actors</item>
         <item name="android:textStyle">bold</item>

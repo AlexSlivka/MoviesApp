@@ -19,9 +19,11 @@
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center_vertical</item>
     </style>
-    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar.Small">
-        <item name="colorControlNormal">@color/dark_grey_of_reviews</item>
-        <item name="colorControlActivated">@color/color_of_genre</item>
+
+    <style name="MyRatingBar">
+        <item name="minHeight">8dp</item>
+        <item name="maxHeight">8dp</item>
     </style>
+
 </resources>
 

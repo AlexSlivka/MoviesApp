@@ -83,67 +83,17 @@
         tools:ignore="SpUsage"
         tools:text="@string/film_genre" />
 
-    <ImageView
-        android:id="@+id/star1_on_poster_imageView"
+    <RatingBar
+        android:id="@+id/ratingBar_star_on_poster"
+        style="@style/CustomRatingBar"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_star_icon_on_poster"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_start_on_poster"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="2dp"
         android:elevation="@dimen/space_3x"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@id/star2_on_poster_imageView"
+        android:numStars="5"
         app:layout_constraintStart_toStartOf="@id/poster_of_movie_imageView"
-        app:layout_constraintTop_toBottomOf="@id/film_genre_on_poster_textView"
-        app:srcCompat="@drawable/ic_star_icon"
-        tools:ignore="RtlSymmetry" />
-
-    <ImageView
-        android:id="@+id/star2_on_poster_imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_star_icon_on_poster"
-        android:elevation="@dimen/space_3x"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@id/star3_on_poster_imageView"
-        app:layout_constraintStart_toEndOf="@id/star1_on_poster_imageView"
-        app:layout_constraintTop_toTopOf="@id/star1_on_poster_imageView"
-        app:srcCompat="@drawable/ic_star_icon"
-        tools:ignore="RtlSymmetry" />
-
-    <ImageView
-        android:id="@+id/star3_on_poster_imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_star_icon_on_poster"
-        android:elevation="@dimen/space_3x"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@id/star4_on_poster_imageView"
-        app:layout_constraintStart_toEndOf="@id/star2_on_poster_imageView"
-        app:layout_constraintTop_toTopOf="@id/star1_on_poster_imageView"
-        app:srcCompat="@drawable/ic_star_icon"
-        tools:ignore="RtlSymmetry" />
-
-    <ImageView
-        android:id="@+id/star4_on_poster_imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_star_icon_on_poster"
-        android:elevation="@dimen/space_3x"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@id/star5_on_poster_imageView"
-        app:layout_constraintStart_toEndOf="@id/star3_on_poster_imageView"
-        app:layout_constraintTop_toTopOf="@id/star1_on_poster_imageView"
-        app:srcCompat="@drawable/ic_star_icon"
-        tools:ignore="RtlSymmetry" />
-
-    <ImageView
-        android:id="@+id/star5_on_poster_imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_star_icon_on_poster"
-        android:elevation="@dimen/space_3x"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@id/reviews_number_on_poster_textView"
-        app:layout_constraintStart_toEndOf="@id/star4_on_poster_imageView"
-        app:layout_constraintTop_toTopOf="@id/star1_on_poster_imageView"
-        app:srcCompat="@drawable/ic_star_icon_gray"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@id/film_genre_on_poster_textView" />
 
     <TextView
         android:id="@+id/reviews_number_on_poster_textView"
@@ -154,7 +104,7 @@
         android:paddingStart="@dimen/space_2x"
         android:textColor="@color/dark_grey_of_reviews"
         android:textSize="@dimen/size_reviews_number_on_poster"
-        app:layout_constraintStart_toEndOf="@id/star5_on_poster_imageView"
+        app:layout_constraintStart_toEndOf="@id/ratingBar_star_on_poster"
         app:layout_constraintTop_toBottomOf="@id/film_genre_on_poster_textView"
         tools:ignore="RtlSymmetry"
         tools:text="@string/reviews_number" />
