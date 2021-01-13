@@ -10,6 +10,8 @@
     <dimen name="size_reviews_number_on_poster">8sp</dimen>
     <dimen name="size_star_icon_on_poster">8dp</dimen>
     <dimen name="margin_start_on_poster">6dp</dimen>
+    <dimen name="margin_bottom_poster">48dp</dimen>
+    <dimen name="width_holder_movie">180dp</dimen>
 
 
 </resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/width_holder_movie"
+    android:layout_height="311dp"
+    android:layout_marginStart="@dimen/space_2x"
+    android:layout_marginTop="@dimen/space_2x"
+    android:background="@drawable/shape_radius_film_card_outline">
+
+    <ImageView
+        android:id="@+id/poster_of_movie_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="@dimen/margin_bottom_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/poster_avengers_end_game" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_gradient_orig"
+        app:layout_constraintBottom_toBottomOf="@+id/poster_of_movie_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/poster_of_movie_imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/poster_of_movie_imageView"
+        app:layout_constraintTop_toTopOf="@+id/poster_of_movie_imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/rectangle_age_limit_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2x"
+        android:layout_marginTop="@dimen/space_2x"
+        android:elevation="@dimen/space_2x"
+        app:layout_constraintStart_toStartOf="@id/poster_of_movie_imageView"
+        app:layout_constraintTop_toTopOf="@id/poster_of_movie_imageView"
+        app:srcCompat="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/age_limit_on_poster_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/space_3x"
+        android:paddingTop="@dimen/space_1x"
+        android:paddingBottom="@dimen/space_1x"
+        android:textColor="@color/white_basic"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_age_limit_imageView"
+        app:layout_constraintEnd_toEndOf="@id/rectangle_age_limit_imageView"
+        app:layout_constraintStart_toStartOf="@id/rectangle_age_limit_imageView"
+        app:layout_constraintTop_toTopOf="@id/rectangle_age_limit_imageView"
+        tools:text="@string/age_limit" />
+
+    <ImageView
+        android:id="@+id/like_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="6dp"
+        android:elevation="@dimen/space_2x"
+        app:layout_constraintEnd_toEndOf="@id/poster_of_movie_imageView"
+        app:layout_constraintTop_toTopOf="@id/poster_of_movie_imageView"
+        app:srcCompat="@drawable/ic_like" />
+
+    <TextView
+        android:id="@+id/film_genre_on_poster_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_on_poster"
+        android:layout_marginBottom="20dp"
+        android:elevation="@dimen/space_3x"
+        android:textColor="@color/color_of_genre"
+        android:textSize="@dimen/size_reviews_number_on_poster"
+        app:layout_constraintBottom_toBottomOf="@id/poster_of_movie_imageView"
+        app:layout_constraintStart_toStartOf="@id/poster_of_movie_imageView"
+        tools:ignore="SpUsage"
+        tools:text="@string/film_genre" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_star_on_poster"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_on_poster"
+        android:layout_marginTop="2dp"
+        android:elevation="@dimen/space_3x"
+        android:numStars="5"
+        app:layout_constraintStart_toStartOf="@id/poster_of_movie_imageView"
+        app:layout_constraintTop_toBottomOf="@id/film_genre_on_poster_textView" />
+
+    <TextView
+        android:id="@+id/reviews_number_on_poster_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:elevation="@dimen/space_3x"
+        android:paddingStart="@dimen/space_2x"
+        android:textColor="@color/dark_grey_of_reviews"
+        android:textSize="@dimen/size_reviews_number_on_poster"
+        app:layout_constraintStart_toEndOf="@id/ratingBar_star_on_poster"
+        app:layout_constraintTop_toBottomOf="@id/film_genre_on_poster_textView"
+        tools:ignore="RtlSymmetry"
+        tools:text="@string/reviews_number" />
+
+    <TextView
+        android:id="@+id/name_of_movie_on_poster_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:elevation="@dimen/space_2x"
+        android:textColor="@color/white_name_of_movie"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/film_genre_on_poster_textView"
+        tools:text="@string/name_of_movie_on_poster" />
+
+    <TextView
+        android:id="@+id/movie_length_on_poster_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_on_poster"
+        android:elevation="@dimen/space_2x"
+        android:textColor="@color/dark_grey_of_movie_length"
+        android:textSize="@dimen/size_reviews_number_on_poster"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/poster_of_movie_imageView"
+        app:layout_constraintTop_toBottomOf="@id/name_of_movie_on_poster_textView"
+        tools:text="@string/movie_length" />
+</androidx.constraintlayout.widget.ConstraintLayout>
