@@ -46,7 +46,7 @@ class MoviesListAdapter(private val clickListener: OnRecyclerItemClicked) :
             itemView.findViewById(R.id.reviews_number_on_poster_textView)
         private val lengthMovieHolder: TextView =
             itemView.findViewById(R.id.movie_length_on_poster_textView)
-        val ratingStarHolder: RatingBar = itemView.findViewById(R.id.ratingBar_star_on_poster)
+        private val ratingStarHolder: RatingBar = itemView.findViewById(R.id.ratingBar_star_on_poster)
 
         fun onBind(movie: Movie) {
             Glide.with(itemView.context)
